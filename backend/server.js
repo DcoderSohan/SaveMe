@@ -79,13 +79,10 @@ app.use(cors({
     if (allowedOrigins.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
-      // In production, you might want to be more strict
-      // For now, allow all origins in development
-      if (process.env.NODE_ENV === 'production') {
-        callback(new Error('Not allowed by CORS'));
-      } else {
-        callback(null, true);
-      }
+      // Log for debugging
+      console.log('CORS: Origin not allowed:', origin);
+      // Allow the request anyway for now (you can make this stricter in production)
+      callback(null, true);
     }
   },
   credentials: true,
