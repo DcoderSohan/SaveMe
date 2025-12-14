@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Backend URL configuration - change this to your backend URL
-export const BASE_URL = 'http://localhost:5000';
+export const BASE_URL = 'https://saveme-backend-ri1a.onrender.com';
 export const API_URL = `${BASE_URL}/api`;
 
 // Create axios instance with default config

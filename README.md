@@ -1,7 +1,3 @@
-mongodb username = sohansarang067_db_user
-password = Sohan0672655
-
-
 # Password Manager App
 
 A full-stack password manager application with document storage capabilities. Users can securely store passwords, upload documents, view images in a modal, and download files.
@@ -57,19 +53,20 @@ npm install
 3. Create a `.env` file in the backend directory:
 ```env
 PORT=5000
-MONGODB_URI=mongodb+srv://sohansarang067_db_user:Sohan0672655@cluster0.mongodb.net/passwordmanager?retryWrites=true&w=majority
+MONGODB_URI=your-mongodb-atlas-connection-string
 JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
 
-# Cloudinary Configuration (Get these from https://cloudinary.com)
+# Cloudinary Configuration (Optional - Get these from https://cloudinary.com)
+# If not provided, files will be stored locally
 CLOUDINARY_CLOUD_NAME=your-cloud-name
 CLOUDINARY_API_KEY=your-api-key
 CLOUDINARY_API_SECRET=your-api-secret
 ```
 
 **Note**: 
-- The MongoDB Atlas connection string is already configured.
-- You need to set up a Cloudinary account (free tier available) at https://cloudinary.com
-- Get your Cloudinary credentials from the dashboard and add them to the `.env` file
+- Set up a MongoDB Atlas account and get your connection string
+- Cloudinary is optional - if not configured, files will be stored locally
+- Get your Cloudinary credentials from the dashboard at https://cloudinary.com
 
 4. Start the backend server:
 ```bash
